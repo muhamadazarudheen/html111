@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function clickEventHandler()
+            {
+                alert("Button clicked");
+                var uName=document.getElementById("txtUserName").value;
+                var password=document.getElementById("txtPassword").value;
+                var errorMessage="<ul>";
+                if(uName.length<=0)
+                {
+                    errorMessage+="<li>UserName cannot be empty</li>";
+                }
+                else
+                if(!uName.match(/^mgs/i))
+                {
+                    errorMessage+="<li>Invalid username </li>";
+                 
+                }
+                else
+                {
+                    var hlFP=document.getElementById("hlForgotPassword");
+                    hlFP.setAttribute("href","https://www.google.com/")
+                    var result=hlFP.getAttribute("target");//_blank
+                }
+                if(password.length<=0)
+                {
+                    errorMessage+="<li>Password cannot be empty</li>";
+                }
+                else
+
+                if(password.length<8)
+                {
+                    errorMessage+="<li>Password should be min 8 characters long </li>";
+                }
+                //should start with mgs
+                
+                //alert(errorMessage);
+                var element=document.getElementById("lblErrorMessage");
+                element.innerHTML=errorMessage+"</ul>"
+                element.style.color="red";
+                var ulElement=document.getElementById("ulCountries");
+                var elementArr=document.getElementsByTagName("li");
+                for(let i=0;i<elementArr.length;i++)
+                {
+                    elementArr[i].style.listStyleType="square";
+                }
+            }
+
+            //can i get the content
+            /*
+            set the value innerHTML
+            change the styling
+            change the attribute value
+*/
+
+            function addParaEventHandler(event)
+            {
+                var paraElement=document.createElement("p");
+                paraElement.innerHTML="Welcome";
+                var parentElement=document.getElementById("divParent");
+                parentElement.appendChild(paraElement);
+                console.log(event.pageX);
+                console.log(event.pageY);
+                var imgElement=document.createElement("img");
+                imgElement.src="facebook.png";
+                imgElement.style.position="absolute";
+                imgElement.style.top=event.pageY+"px";
+                imgElement.style.left=event.pageX+"px";
+                parentElement.appendChild(imgElement);
+
+                            }
+            </script>
+
+
+    </head>
+    <body>
+        <form action="" method="get">
+            <label id="lblUserName">UserName</label>
+            <input type="text" id="txtUserName"/>
+            <label id="lblPassword">Password</label>
+            <input type="password" id="txtPassword" />
+            <input type="button" id="btnSubmit" value="Login" onclick="clickEventHandler();"/>
+            <input type="button" id="btnAddElement" value="Add Para" onclick="addParaEventHandler(event);"/>
+            <label id="lblErrorMessage"></label>
+            <ul id="ulCountries">
+                <li>
+                    India
+                </li>
+                <li>Australia</li>
+                <li>Singapore</li>
+            </ul>
+            <a id="hlForgotPassword" target="_blank">Forgot Password</a>
+        </form>
+        <div id="divParent">
+            <p>Welcome to Mindgate</p>
+        </div>
+    </body>
+</html>

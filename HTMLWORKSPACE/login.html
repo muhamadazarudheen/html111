@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        function validateLogin()
+        {
+            var name=document.getElementById("txtName").value;
+            var pswd=document.getElementById("txtPswd").value;
+            var errMsg="<UL>";
+            if(name==null||name==""){
+                errMsg+="<li>name cannot be null</li>";
+                
+                
+            }
+            if(pswd==null||pswd==""){
+                errMsg+="<li>password cant be empty</li>";
+            
+            }
+            else if(pswd.length<6){
+                errMsg="<li>password should be min 6 characters</li>";
+                
+
+            }
+            else if(!pswd.match(/[a-zA-Z0-9]/g)){
+                errMsg="<li>Invalid Password</li>"
+            }
+           
+            var element=document.getElementById("lblErr");
+            element.innerHTML=errMsg+"</ul>";
+            element.style.color="red";
+            
+            $("#lblErr").slideDown(5000);
+            
+        }
+    </script>
+</head>
+<body>
+    <form id="loginId" action="" method="">
+    <label>UserName</label>
+    <input type="text" id="txtName"><br>
+    <label>Password</label>
+    <input type="password" id="txtPswd"><br>
+    <input id="btnclick" type="button" value="Login" onclick="validateLogin();"><br>
+    <label id="lblErr" style="display:none";></label>
+</form> 
+</body> 

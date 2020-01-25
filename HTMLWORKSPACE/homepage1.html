@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Homepage</title>
+        <script src="jquery-3.4.1.js"></script>
+        <script src="jquery-ui.js"></script>
+        <style>
+            #main-div
+            {
+
+             background-image: url("bgimage.jpg");
+             height:500px;
+
+            }
+            ul li
+            {
+            
+              display:inline-block;
+              list-style-type:none;
+              border-right: 2px solid rosybrown; 
+              width:120px;  
+              text-align:center;        
+            }
+            #para1
+            {
+
+                position:absolute;
+                top:29px;
+                left:55px;
+                border:3px solid black;
+            }
+            #para2
+            {
+                position:absolute;
+                top:35px;
+                right:180px;
+                border:2px;
+            }
+            #para3
+            {
+                position: absolute;
+                top:200px;
+                right:250px;
+                font-size:xx-large;
+                font-style: italic;
+                text-align: center;
+            }
+            #main-div2
+            {
+                height:400px;
+                border:2px solid black;
+            }
+            ol li
+            {
+            
+             
+              list-style-type:none;
+            }
+           
+            
+        </style>
+        <script>
+              $( function() {
+    $( "#accordion" ).accordion();
+  } );
+        </script>
+    </head>
+    <body>
+        <div id="main-div">
+            <div id="para1">
+                <h2 style=padding-left:2px;padding-right:2px;>Mindgate</h2>
+            </div>
+            <div id="para2">
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Locations</li>
+                    <li>About us</li>
+                </ul>
+            </div>
+            <div id="para3">
+                <p>
+                  "We Make Transactions Simple & <br>Secure For Everyone"  
+                </p>
+            </div>
+        </div>
+        <div id="main-div2">
+            <table>
+                <tr>
+                    <td>INDUSTRY<br>OFFERINGS</td>
+                    <td>PAYMENT<br>OFFERINGS</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>Logistics</li>
+                            <li>Insurance</li>
+                            <li>Capital Markets</li>
+                            <li>OMC</li>
+                            <li>Telecos</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Banks</li>
+                            <li>Government</li>
+                            <li>Corporate</li>
+                            
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="accordion">
+            <h3>Section 1</h3>
+            <div>
+              <p>
+                Mindgate’s Merchant Management Platform is a complete end to end solution for acquiring banks for managing their merchant related activities such as Merchant On-boarding, merchant servicing, and complete 360-degree reporting. Our platform provides a unique combination of payment, digital and transactional expertise which enables a bank to provide its merchants a solution to increase their […]
+
+              </p>
+            </div>
+            <h3>Section 2</h3>
+            <div>
+              <p>
+                Scheme/Subsidy Platform
+
+                The Flagship backbone for Fund Disbursement in Scheme and Subsidy Payments, the Public Financial Management System (PFMS) is utilized by Ministry of Finance (GOI) for enabling fund flow from government to agencies, states, districts digitally, as well as to citizens (beneficiaries ) using the DBT mode.
+              </p>
+            </div>
+            <h3>Section 3</h3>
+            <div>
+              <p>
+                Mindgate’s Merchant Management Platform is a complete end to end solution for acquiring banks for managing their merchant related activities such as Merchant On-boarding, merchant servicing, and complete 360-degree reporting. Our platform provides a unique combination of payment, digital and transactional expertise which enables a bank to provide its merchants a solution to increase their […]
+              </p>
+              <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+              </ul>
+            </div>
+            <h3>Section 4</h3>
+            <div>
+              <p>
+                With the advent of digital transactions, the customer’s needs for an option for having a wallet that can be used for quick and fast transactions has seen a spurt in demand for a wallet as a financial instrument.</p>
+            </div>
+          </div>
+    </body>
+</html>

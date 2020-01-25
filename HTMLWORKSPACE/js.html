@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        
+        alert("hello");
+        function myFun1(arr,index,c,...p){
+            var length=arr.length;
+            while(c>0){
+                for(let i=index;i<length;i++){
+                    arr[i]=arr[i+1];
+                    
+                }
+                length--;
+                c--;
+            }
+            console.log(length);
+            for(let i=0;i<length;i++)
+            {
+            console.log(arr[i]);
+            }
+            for(let j=length;j>=index;j--){
+                arr[j]=arr[j-1];
+            }
+            arr[index]=p;
+            console.log(arr);
+        }
+        myFun1([1000,20000,30000],1,2,10,20,30);
+
+        
+        </script>
+    </head>
+</html>
